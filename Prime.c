@@ -1,22 +1,140 @@
-/*æ»¡è¶³ä¸‹åˆ—æ¡ä»¶çš„è‡ªç„¶æ•°ç§°ä¸ºè¶…çº§ç´ æ•°:è¯¥æ•°æœ¬èº«,æ‰€æœ‰æ•°å­—ä¹‹å’Œ,æ‰€æœ‰æ•°å­—ä¹‹ç§¯ä»¥åŠæ‰€æœ‰æ•°å­—çš„å¹³æ–¹å’Œéƒ½æ˜¯ç´ æ•°.ä¾‹å¦‚113å°±æ˜¯ä¸€ä¸ªè¶…çº§ç´ æ•°.æ±‚[100,9999]ä¹‹å†…:(1)è¶…çº§ç´ æ•°çš„ä¸ªæ•°.(2)æ‰€æœ‰è¶…çº§ç´ æ•°ä¹‹å’Œ.(3)æœ€å¤§çš„è¶…çº§ç´ æ•°.*/
-//2018/11/14 æ›´æ–°
+/*Âú×ãÏÂÁÐÌõ¼þµÄ×ÔÈ»Êý³ÆÎª³¬¼¶ËØÊý:¸ÃÊý±¾Éí,ËùÓÐÊý×ÖÖ®ºÍ,ËùÓÐÊý×ÖÖ®»ýÒÔ¼°ËùÓÐÊý×ÖµÄÆ½·½ºÍ¶¼ÊÇËØÊý.ÀýÈç113¾ÍÊÇÒ»¸ö³¬¼¶ËØÊý.Çó[100,9999]Ö®ÄÚ:
+(1)³¬¼¶ËØÊýµÄ¸öÊý.
+(2)ËùÓÐ³¬¼¶ËØÊýÖ®ºÍ.
+(3)×î´óµÄ³¬¼¶ËØÊý.*/
+
+//2018/11/14 ¸üÐÂ
+#include<stdio.h>
+#include<math.h> 
+#include<stdbool.h>
 int sum_bit(int num) {
-  return 0;
+   int i,t,z,s;
+    
+    int p=0;
+    int a=0;
+    t= num;
+	while(1){
+    	 num= num/10;
+    	if(num>0)p++;
+    	if(num<=0)break;
+    	
+	}
+	
+	while(p>=0){
+		i=pow(10,p);
+		z=t/i;
+		z=z%10;
+	    s=s+z;
+		p--;
+	}
+    for(i=2;i<s;i++){
+        if(s%i==0){
+            a++;  // ËØÊý¸öÊý¼Ó1
+        }
+    }
+
+   if(a==0){
+       return 1;
+    }
+	else{
+       return 0;
 }
+
+}
+
+
 
 int multi_bit(int num) {
-  return 0;
+ int i,t,z,s;
+    
+    int p=0;
+    int a=0;
+    t= num;
+	while(1){
+    	 num= num/10;
+    	if(num>0)p++;
+    	if(num<=0)break;
+    	
+	}
+	
+	while(p>=0){
+		i=pow(10,p);
+		z=t/i;
+		z=z%10;
+	    s=s*z;
+		p--;
+	}
+    for(i=2;i<s;i++){
+        if(s%i==0){
+            a++;  // ËØÊý¸öÊý¼Ó1
+        }
+    }
+
+    if(a==0){
+       return 1;
+    }else{
+       return 0;
 }
+
+
+}
+
+
 
 int square_sum_bit(int num) {
-  return 0;
+ int i,t,z,s;
+    
+    int p=0;
+    int a=0;
+    t= num;
+	while(1){
+    	 num= num/10;
+    	if(num>0)p++;
+    	if(num<=0)break;
+    	
+	}
+	
+	while(p>=0){
+		i=pow(10,p);
+		z=t/i;
+		z=z%10;
+	    s=s+z*z;
+		p--;
+	}
+    for(i=2;i<s;i++){
+        if(s%i==0){
+            a++;  -
+        }
+    }
+
+    if(a==0){
+       return 1;
+    }else{
+       return 0;
 }
+
+}
+
 
 bool isprime(int num) {
-  return false;
+
+  if(num==1)return true;
+  if(num==0)return false;
+
 }
 
+
+
 int main() {
-  if(isprime(113)&&isprime(sum_bit(113))&&isprime(multi_bit(113))&&isprime(square_sum_bit(113)))
+
+   int num=100;
+  for(;num<10000;num++){
+  
+  if(isprime(sum_bit(num))&&isprime(multi_bit(num))&&isprime(square_sum_bit(num))){
+  	printf("%dÊÇ³¬¼¶ËØÊý\n",num);
+  }
+}
+    return 0;
     //to do sth
+
 }

@@ -1,5 +1,37 @@
-//å›æ–‡æ•°ï¼šæ­£è¯»ä¸åè¯»ç›¸ç­‰çš„æ•°
-//2018/11/14 æ›´æ–°
+
+//»ØÎÄÊı£ºÕı¶ÁÓë·´¶ÁÏàµÈµÄÊı
+
+//2018/11/14 ¸üĞÂ
+#include<stdio.h>
+#include<string.h> 
+char a[1000];
+
 int main() {
-    //to do sth
+     
+    int x,l,i;
+    scanf("%s",a);
+     
+    x=strlen(a);
+    x=x-1;
+    l=0;
+    i=x/2;
+	
+	while(x>=i){
+		if(a[l]!=a[x]){
+		printf("²»ÊÇ»ØÎÄÊı");
+		break;
+		}
+		l++;
+		x--; 
+	}
+	if(l>=x)printf("ÊÇ»ØÎÄÊı");
+	
+
+	
+	
+	
+	
+	return 0;
+	//to do sth
+
 }

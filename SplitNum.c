@@ -1,5 +1,34 @@
-//è¾“å…¥æ•´æ•°ï¼Œå°†æ¯ä½æ•°å­—æ‰“å°å‡ºæ¥ï¼ˆä»Žå·¦å‘å³æ‰“å°ï¼Œç©ºæ ¼åŒºåˆ†ï¼‰
-//2018/11/14 æ›´æ–°
+//ÊäÈëÕûÊý£¬½«Ã¿Î»Êý×Ö´òÓ¡³öÀ´£¨´Ó×óÏòÓÒ´òÓ¡£¬¿Õ¸ñÇø·Ö£©
+
+//2018/11/14 ¸üÐÂ
+#include<stdio.h>
+#include<math.h>
 int main() {
-    //to do sth
+    
+    
+    int x,i,t,z;
+    scanf("%d",&x);
+    int p=0;
+    t=x;
+	while(1){
+    	x=x/10;
+    	if(x>0)p++;
+    	if(x<=0)break;
+    	
+	}
+	
+	while(p>=0){
+		i=pow(10,p);
+		z=t/i;
+		z=z%10;
+		printf("%d ",z);
+		p--;
+	}
+	
+    
+    
+	return 0; 
+	//to do sth
+
 }
+
